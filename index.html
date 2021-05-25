@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Blank Page - SonoranBot</title>
+    <!--<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/css/bootstrap-nightshade.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css">
+    <link rel="stylesheet" href="assets/css/switch.css">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <div class="container-fluid">
+                    <h3 class="text-light mb-1">SonoranBot Permissions Generator</h3>
+                </div>
+                <div class="row" style="margin-right: 0px;margin-left: 0px;">
+                    <div class="col">
+                        <form id="permsForm">
+                            <div class="row">
+                                <div class="col-xl-3">
+                                    <div class="form-group form-inline"><label class="form-label" for="codeInput">Check Permissions For Code:</label> <input class="form-control" type="text" length="40" id="codeInput" name="codeInput" onkeydown="if(event.keyCode==13){ $('#codeInput').blur(); return false;}"/></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div style="padding-bottom: 15px;"><span style="font-size: 18px;">Page Permissions</span></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="CIVILIAN" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="CIVILIAN" style="padding-left: 20px;">Civilian</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="POLICE" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="POLICE" style="padding-left: 20px;">Police</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="DISPATCH" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="DISPATCH" style="padding-left: 20px;">Dispatch</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="EMS" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="EMS" style="padding-left: 20px;">EMS</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="FIRE" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="FIRE" style="padding-left: 20px;">Fire</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="DMV" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="DMV" style="padding-left: 20px;">DMV</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="LAWYER" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="LAW" style="padding-left: 20px;">Law</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="ADMIN" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="ADMIN" style="padding-left: 20px;">Admin</label></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div style="padding-bottom: 15px;"><span style="font-size: 18px;">Unit - General</span></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="POLEDITUNIT" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Edit Identifier</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="POLEDITOTHERUNIT" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Edit Other's Identifier</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="SELFDISPATCH" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Self Dispatch</label></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div style="padding-bottom: 15px;"><span style="font-size: 18px;">Police - Advanced</span></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="POLRECADD" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Add</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="POLRECEDIT" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Edit</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="POLRECREMOVE" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Remove</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="POLSUPER" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Supervisor</label></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div style="padding-bottom: 15px;"><span style="font-size: 18px;">EMS - Advanced</span></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="MEDRECADD" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Add</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="MEDRECEDIT" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Edit</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="MEDRECREMOVE" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Remove</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="MEDSUPER" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Supervisor</label></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div style="padding-bottom: 15px;"><span style="font-size: 18px;">Fire - Advanced</span></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="FIRERECADD" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Add</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="FIRERECEDIT" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Edit</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="FIRERECREMOVE" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Remove</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="FIRESUPER" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Supervisor</label></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div style="padding-bottom: 15px;"><span style="font-size: 18px;">DMV Records</span></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="DMVRECADD" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Add</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="DMVRECEDIT" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Edit</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="DMVRECREMOVE" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Remove</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="DMVSUPER" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Supervisor</label></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div style="padding-bottom: 15px;"><span style="font-size: 18px;">Law Records</span></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="LAWRECADD" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Add</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="LAWRECEDIT" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Edit</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="LAWRECREMOVE" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Remove</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="LAWSUPER" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Supervisor</label></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div style="padding-bottom: 15px;"><span style="font-size: 18px;">Admin Access</span></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="ADMINACCOUNTS" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Accounts</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="ADMINPERMISSIONKEYS" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Permission Keys</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="ADMINCUSTOMIZATION" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Customization</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="ADMINDEPARTMENTS" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Departments</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="ADMINTENCODES" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">10-Codes</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="ADMINPENALCODES" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Penal Codes</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="ADMININGAMEINTEGRATION" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">In-Game Integration</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="ADMINDISCORDINTEGRATION" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Discord Integration</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="ADMINLIMITS" name="perms" data-toggle="toggle" data-size="sm" style="padding-right: 0px;margin-right: 0px;"><label class="form-check-label" for="formCheck-1" style="padding-left: 20px;">Limits</label></div>
+                                </div>
+                            </div>
+                            <div class="row text-end">
+                                <div class="col text-center"><p><span>Your Generated Code:&nbsp;<strong><span id="code">0</span></strong></p></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/js/darkmode.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/perms.js"></script>
+    <script type="text/javascript">
+    function setPerms(p) {
+        let perms = getPermissions(p);
+        $('input[type=checkbox]').bootstrapToggle('off');
+        perms.forEach(element => {
+            if (element != "NONE" && element != undefined) {
+                console.log("toggle " + element);
+                $('#'+element).bootstrapToggle('on');
+            }
+        });
+        $("#code").text = p;
+    }
+    $(document).ready(function(){
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const code = urlParams.get('code');
+        console.log(code);
+        if (code != null) {
+            document.getElementById("codeInput").value = code;
+            setPerms(code);
+        }
+    })
+    $("#permsForm input[type=checkbox]").on("change", function() {
+        let current = BigInt($('#code').text());
+        let newCode = 0;
+        console.log(current + " - " + this.id);
+        if (this.checked) {
+            newCode = addPermission(current, this.id);
+        } else {
+            newCode = delPermission(current, this.id);
+        }
+        if (newCode < 0) return;
+        console.log("new code " + newCode);
+        $('#code').text(newCode);
+    });
+    $("#codeInput").on("change", function() {
+        setPerms(this.value);
+    });
+    </script>
+</body>
+
+</html>
