@@ -66,7 +66,7 @@ function getPermissions(bitmask) {
 
 function addPermission(bitmask, permission) {
     if (PERMISSIONS[permission] != null) {
-        let result = BigInt(bitmask + BigInt(PERMISSIONS[permission]));
+        let result = BigInt(BigInt(bitmask) + BigInt(PERMISSIONS[permission]));
         return result;
     } else {
         throw new EvalError(`Invalid permission ${permission}`);
@@ -75,7 +75,7 @@ function addPermission(bitmask, permission) {
 
 function delPermission(bitmask, permission) {
     if (PERMISSIONS[permission] != null) {
-        let result = BigInt(bitmask - BigInt(PERMISSIONS[permission]));
+        let result = BigInt(BigInt(bitmask) - BigInt(PERMISSIONS[permission]));
         return result;
     } else {
         throw new EvalError(`Invalid permission ${permission}`);

@@ -127,7 +127,9 @@
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/perms.js"></script>
     <script type="text/javascript">
+    let currentCode = BigInt(0);
     function setPerms(p) {
+        currentCode = 0;
         let perms = getPermissions(p);
         $('input[type=checkbox]').bootstrapToggle('off');
         perms.forEach(element => {
@@ -135,20 +137,20 @@
                 $('#'+element).bootstrapToggle('on');
             }
         });
-        $("#code").text = p;
+        currentCode = BigInt(p);
+        $("#code").text = currentCode;
     }
     $(document).ready(function(){
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const code = urlParams.get('code');
-        console.log(code);
         if (code != null) {
             document.getElementById("codeInput").value = code;
             setPerms(code);
         }
     })
     $("#permsForm input[type=checkbox]").on("change", function() {
-        let current = BigInt($('#code').text());
+        let current = currentCode;
         let newCode = 0;
         if (this.checked) {
             newCode = addPermission(current, this.id);
@@ -157,6 +159,7 @@
         }
         if (newCode < 0) return;
         $('#code').text(newCode);
+        currentCode = newCode;
     });
     $("#codeInput").on("change", function() {
         setPerms(this.value);
