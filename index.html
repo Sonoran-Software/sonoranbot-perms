@@ -132,7 +132,6 @@
         $('input[type=checkbox]').bootstrapToggle('off');
         perms.forEach(element => {
             if (element != "NONE" && element != undefined) {
-                console.log("toggle " + element);
                 $('#'+element).bootstrapToggle('on');
             }
         });
@@ -151,14 +150,12 @@
     $("#permsForm input[type=checkbox]").on("change", function() {
         let current = BigInt($('#code').text());
         let newCode = 0;
-        console.log(current + " - " + this.id);
         if (this.checked) {
             newCode = addPermission(current, this.id);
         } else {
             newCode = delPermission(current, this.id);
         }
         if (newCode < 0) return;
-        console.log("new code " + newCode);
         $('#code').text(newCode);
     });
     $("#codeInput").on("change", function() {
